@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello webpack 3</title>
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <!-- 若利用 extract-text-webpack-plugin 產生靜態檔案，記得將產生的檔案放入 'app.bundle.css' -->
+  <link rel='stylesheet' href="dist/app.bundle.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- 利用 CommonsChunkPlugin 產生的共同模組區，記得放入 'commons.js' -->
+  <script src='dist/commons.js'></script>
+  <script src="dist/app.bundle.js"></script>
+</body>
+
+</html>
